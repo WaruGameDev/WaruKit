@@ -13,6 +13,7 @@ Código Unity reutilizable con los patrones de Waru (WaruGameDev). Modular, con 
 | `Core/InputHandler.cs` | Input centralizado con flag `canUseInput` (bloqueable en cutscenes) |
 | `Core/Health.cs` | Vida reutilizable con eventos `OnDamaged`/`OnHealed`/`OnDied` |
 | `Core/FormatUtils.cs` | Formato de números K/M/B y F1 |
+| `Core/DOTweenHelper.cs` | Utilidades DOTween: Pop, ShakeHit, DamageNumber, ClashAttack, SequenceOf, OpenLid |
 
 ## Reglas de los patrones de Waru
 
@@ -21,7 +22,7 @@ Código Unity reutilizable con los patrones de Waru (WaruGameDev). Modular, con 
 3. **PlayerPrefs SIEMPRE al final**: memoria primero, persistir con `Save()` explícito al cerrar/guardar. Nunca en `Update()`.
 4. **Eventos/delegados**: `Action` + `?.Invoke()` pa' desacoplar. Sistemas se suscriben, no se acoplan.
 5. **ScriptableObject** pa' data de diseño con `[CreateAssetMenu]` (ver `UnitData` de AutoBattlerUGM).
-6. **DOTween** pa' animaciones juicy: `Sequence` + `AppendCallback`/`AppendInterval`.
+6. **DOTween es el copiloto** — casi obligatorio pa' animaciones juicy: `Sequence` + `AppendCallback`/`AppendInterval`, `DOJump`, `DOPunchScale`, `SetEase(Ease.OutBack)`. Si no está instalado, avisar a Waru.
 7. **`RemoveAll(u => u == null)`** antes de indexar listas de GameObjects.
 8. **Comentarios con chilenismos** y que explican el porqué, no el qué.
 
