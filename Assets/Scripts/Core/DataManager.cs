@@ -26,7 +26,7 @@ public static class DataManager
         lives = 3;
         questProgress.Clear();
         flags.Clear();
-        selectedUnits.Clear();
+        crossSceneData.Clear();
     }
 
     // --- Persistencia (SIEMPRE al final del flujo) ---
