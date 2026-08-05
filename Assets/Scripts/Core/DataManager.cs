@@ -15,8 +15,9 @@ public static class DataManager
     public static Dictionary<string, int> questProgress = new Dictionary<string, int>();
     public static Dictionary<string, bool> flags = new Dictionary<string, bool>();
 
-    // --- Listas entre escenas ---
-    public static List<UnitData> selectedUnits = new List<UnitData>();
+    // --- Listas entre escenas (tipos del proyecto; UnitData es ejemplo de AutoBattler) ---
+    // public static List<UnitData> selectedUnits = new List<UnitData>();
+    public static List<object> crossSceneData = new List<object>();
 
     /// <summary>Resetea TODO el estado (pa' new game o reinicio).</summary>
     public static void ResetAll()

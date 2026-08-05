@@ -5,7 +5,8 @@
 //   - DOPunchScale pa' hit feedback
 //   - DOLocalRotate con Ease.OutBack pa' abrir cosas
 //   - Sequence con AppendCallback / AppendInterval / Join pa' coreografias
-// Requiere: paquete DOTween (Demigiant) en el proyecto.
+// Requiere: paquete DOTween (Demigiant). El simbolo DOTWEEN se define solo al instalarlo.
+#if DOTWEEN
 using DG.Tweening;
 using UnityEngine;
 
@@ -69,3 +70,5 @@ public static class DOTweenHelper
         unit.DOJump(pos, jumpHeight, 1, duration);
     }
 }
+#endif // DOTWEEN
+
